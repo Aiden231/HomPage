@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>나의 홈페이지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 다크모드 토글 버튼 -->
+  <button id="toggle-mode">🌙 다크 모드</button>
+
+  <script>
+  const button = document.getElementById('toggle-mode');
+  button.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    button.textContent = document.body.classList.contains('dark') ? '☀️ 라이트 모드' : '🌙 다크 모드';
+  });
+</script>
+
+  <h1 class="title">안녕하세요! 👋 나의 홈페이지에 오신 걸 환영합니다</h1>
+
+  <!-- 1. 본인 사진 -->
+  <img src="profile.jpg" alt="내 사진" width="200">
+
+  <!-- 2. 테이블을 사용한 자기소개 -->
+  <table border="1" class="intro-table">
+    <tr><th>이름</th><td>이상원</td></tr>
+    <tr><th>학교</th><td>계명대학교</td></tr>
+    <tr><th>전공</th><td>컴퓨터공학과</td></tr>
+    <tr><th>취미</th><td>야구, 음악 듣기</td></tr>
+  </table>
+
+  <!-- 5. 이탤릭 + 6. 다양한 글씨 크기 -->
+  <p class="italic-text">"끊임없이 배우고 성장하는 개발자가 되겠습니다."</p>
+  <p class="big-text">지금 배우는 HTML은 웹의 시작입니다!</p>
+
+  <!-- 8. 검색엔진 이미지 링크 -->
+  <div class="search-engines">
+    <a href="https://www.google.com" target="_blank">
+      <img src="images/google.png" alt="구글" width="100">
+    </a>
+    <a href="https://www.naver.com" target="_blank">
+      <img src="images/naver.png" alt="네이버" width="100">
+    </a>
+  </div>
+
+  <!-- 추가점수: 유튜브 영상 삽입 -->
+  <h2>내가 좋아하는 영상</h2>
+  <iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/vGuJuW0bDWA"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen>
+</iframe>
+
+</body>
+</html>
